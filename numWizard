@@ -1,0 +1,22 @@
+min = int(input("What would you like the minimum number to be: "))
+max = int(input("What would you like the maximum number to be: "))
+print("Make sure to think of a number between " + str(min) + " and " + str(max))
+print("If your number is higher or lower than my guess type h or l if it is correct type y.")
+guess = max / 2
+guess = int(guess)
+answer = ""
+i = 0
+while i == 0:
+    print(guess)
+    answer = input("Is that number the same as yours?: ")
+    if answer == "y":
+        print("haha I win")
+        i = 1
+    if answer == "h":
+        min = guess
+        guess = (min + max) / 2
+        guess = int(guess)
+    if answer == "l":
+        max = guess
+        guess = (min + max) / 2
+        guess = int(guess)
